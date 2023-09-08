@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
+            $table->string('payment_method');
+            $table->integer('total_amount');
+            $table->date('purchase_date');
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onDelete('CASCADE')
+                ->onUpdate('CASCADE');
             $table->timestamps();
         });
     }

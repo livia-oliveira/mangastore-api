@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('volumes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('manga_id')
-                ->constrained()
-                ->onDelete('CASCADE')
-                ->onUpdate('CASCADE');
             $table->string('name_of_volume');
             $table->integer('number_of_volume');
             $table->integer('number_of_chapters');
             $table->integer('stock');
             $table->integer('price');
+            $table->foreignId('manga_id')
+            ->constrained()
+            ->onDelete('CASCADE')
+            ->onUpdate('CASCADE');
             $table->timestamps();
 
 
