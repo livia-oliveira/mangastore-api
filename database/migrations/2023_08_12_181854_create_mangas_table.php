@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('author');
             $table->integer('minimum_age');
-            $table->date('release_year');
+            $table->string('release_year');
             $table->string('publisher');
             $table->timestamps();
         });

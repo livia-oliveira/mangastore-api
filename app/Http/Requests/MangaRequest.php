@@ -26,7 +26,7 @@ class MangaRequest extends FormRequest
             'description'=>'nullable|string',
             'author'=>'required|string',
             'minimum_age'=>'required|integer',
-            'release_year'=>'required|date',
+            'release_year'=>'required|string',
             'publisher'=>'required|string',
         ];
     }
