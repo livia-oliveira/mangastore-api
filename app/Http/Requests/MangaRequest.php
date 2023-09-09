@@ -11,7 +11,7 @@ class MangaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class MangaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title'=>'required|string',
+            'description'=>'nullable|string',
+            'author'=>'required|string',
+            'minimum_age'=>'required|integer',
+            'release_year'=>'required|date',
+            'publisher'=>'required|string',
         ];
     }
 }

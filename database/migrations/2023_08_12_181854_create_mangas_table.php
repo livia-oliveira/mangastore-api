@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('mangas', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('description')->nullable();
+            $table->string('description')->nullable();
             $table->string('author');
             $table->integer('minimum_age');
             $table->date('release_year');
