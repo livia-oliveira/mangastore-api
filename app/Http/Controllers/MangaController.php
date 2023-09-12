@@ -45,4 +45,16 @@ class MangaController extends Controller
         return response(['error'=>'Manga not found'])->setStatusCode(404);
     }
 
+    public function destroy($id){
+        $mangaExist = $this->manga->find($id);
+
+        if($mangaExist){
+            $mangaExist->delete();
+
+            return response(['message'=>'Manga deleted with sucess'])->setStatusCode(200);
+        }
+
+        return response(['error'=>'Manga not found'])->setStatusCode(404);
+    }
+
 }
