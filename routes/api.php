@@ -11,3 +11,4 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 Route::get('/mangas', [MangaController::class, 'index']);
 Route::post('/mangas', [MangaController::class, 'store']);
+Route::put('/mangas/{id}', [MangaController::class, 'update']);
